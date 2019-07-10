@@ -1,0 +1,38 @@
+/***JSX: JavaScript Extension***/
+File Name: App.js
+
+function SayHello() {
+  return <h1>Hello Hello Bole Ke!</h1>
+}
+class App extends Component {
+  render() {
+    return (
+      <div className='hello' htmlFor='hi'>
+        <SayHello/>
+      </div>
+    );
+  }
+}
+
+/***ES6 function & class Component***/
+No need to import Component in function, but have to do in class
+No render method in function, but have it is in class
+props is not available, & have to pass in funciton const User = (props) = {}
+no need to use this.props in function, use it without this eg. {props.name}
+use function, if no need to maintain state
+
+/***state & props ***/
+state - inside
+props - outside
+
+Run console.log(this.state.___) after setState(), you will see the values would't change.
+As setState changes the values only in virtual DOM
+
+/** Events & Two way Binding **/
+Default parameter is event in case of input field
+<input type="text" name="" value={this.state.name}>
+Changes in span or div {this.state.name} using onClick & changes in input type="text" using event.target.value is known as two way binding
+
+/** Component Communication **/
+Passing all the properties from Grand parent to grand Child using spreard operator
+  <Child {...props}/>

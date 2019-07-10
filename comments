@@ -1,0 +1,67 @@
+import React from 'react';
+import { connect } from 'react-redux';
+
+function Counter(props) {
+  return (
+    <div>
+      <h1>This is Counter! </h1>
+      <p>Count: {props.count}</p>
+      <button>Increment</button>
+    </div>
+  );
+}
+
+function mapStateToProps(state) {
+  console.log('mapStateToProps', state);
+  return {
+    count: state.count
+  }
+}
+export default connect(mapStateToProps)(Counter);
+
+We are going to use or learn redux in this project
+We will not use state in the App component, so will use only function instead of class
+
+https://www.youtube.com/watch?v=kJeXr1K3nyg
+
+Redux is a state container for ReactJS
+
+npm install redux react-redux --save
+
+react-redux is a library to stick react & redux
+
+export default Counter;
+export default connect(mapStateToProps)(Counter);
+
+connect(mapStateToProps)(Counter) creates a new component which hooks
+mapStateToProps function to Counter function. connect(mapStateToProps)(Counter) is
+wrapping a our Counter component
+
+Following both are correct as returning single element
+const App = () => (<PersonList/>)
+const App = () => <PersonList/>
+
+Following is an example to call props in single page
+
+const App = () => <PersonList/>
+
+const PersonList = () => {
+  const people = [ {name: 'John', img:22}, {name: 'Paul', img:65}]
+  return (
+    people.map(person=>{
+      return <Person person={person}/>
+    })
+  )
+}
+
+const Person = (props) => {
+  const {img, name} = props.person
+  return (
+      <div>
+        <img src={url} alt={name}/>
+      </div>
+    )
+  }
+
+Concatination
+const url = 'https://randomuser.me'+`${img}`+'.jpg'

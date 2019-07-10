@@ -1,0 +1,34 @@
+https://www.youtube.com/watch?v=PvCQfdVEBfA&index=1&list=PLpdiIovPfYaS4iUQOtm-sBoNz0TEe6GXh
+
+It is UI library that offers re useable UI components i.e.. <captcha/>, <Datepicker />. These are normal tags as p, h1
+The new thing in React, you will create element using JavaScript
+React doesn't use any template language. Creating HTML elements using JavaScript
+It is component based architecture
+Declarative
+Don't need to work with DOM, will work on virtual DOM given by React
+React has stable community, will get code eg. there is a file upload component eg dropzone
+React is not a complete framework, it is a user interface library, have to use redux or react Router to make it world level
+Class Name should start with Upper case
+class should have at least one method, which is usually render method.
+The render method should return something
+
+JSX
+JSX is like HTML
+Transfiler is used
+
+npm install -g create-react-app
+Go to the folder where you want to create project
+And run the following command
+create-react-app hello-world
+
+when we pass property from parent to child, we use props
+When we want to change any value inside a child, we use state(Digital Clock)
+Both are class properties, and accessible using this
+props is immutable, can't change
+state is mutable, can be changed
+class name starts with caps
+No need to return value in ternary operator, as it return by default
+You could use props to access a value in the parent(this.props.val) passed from a child(this.state.val)
+function name also should start with capital letter
+
+Routing npm react-router-dom
